@@ -1,0 +1,9 @@
+version: '3'
+
+tasks:
+  generate-api:
+    desc: Генерация DTO и интерфейсов из OpenAPI схемы
+    cmds:
+      - oapi-codegen --config=api/config.yaml api/swagger.yaml
+    generates:
+      - internal/api/openapi.gen.go

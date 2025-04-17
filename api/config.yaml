@@ -1,0 +1,5 @@
+output: internal/api/openapi.gen.go
+package: api
+generate:
+  - types
+  - server

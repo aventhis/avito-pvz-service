@@ -1,0 +1,12 @@
+# IDE
+.idea/
+*.iml
+
+# Task cache
+.task/
+
+# Binaries
+bin/
+
+# MacOS
+.DS_Store
