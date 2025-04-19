@@ -7,3 +7,29 @@ tasks:
       - oapi-codegen --config=api/config.yaml api/swagger.yaml
     generates:
       - internal/api/openapi.gen.go
+
+  docker-build:
+    desc: Сборка Docker-образа
+    cmds:
+      - docker build -t avito-pvz-service .
+
+  docker-up:
+    desc: Запуск всех сервисов через Docker Compose
+    cmds:
+      - docker-compose up -d
+
+  docker-down:
+    desc: Остановка всех сервисов Docker Compose
+    cmds:
+      - docker-compose down
+
+  docker-logs:
+    desc: Просмотр логов приложения
+    cmds:
+      - docker-compose logs -f app
+
+  docker-rebuild:
+    desc: Пересборка и перезапуск сервисов
+    cmds:
+      - docker-compose down
+      - docker-compose up -d --build
